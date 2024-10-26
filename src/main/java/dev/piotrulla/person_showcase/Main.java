@@ -9,17 +9,26 @@ public class Main {
 
         personService.sendIntroduce(person);
 
-        for (int i = 0; i < 2; i++) {
-            System.out.println(" ");
-        }
+        sendEmptyLines();
 
         personService.sendIntroduceListMessage(person);
 
+        sendEmptyLines();
+
+        sendDolarTree();
+    }
+
+    static void sendEmptyLines() {
+        for (int i = 0; i < 2; i++) {
+            System.out.println(" ");
+        }
+    }
+
+    static void sendDolarTree() {
         String dolar = "$";
 
         for (int i = 0; i < 10; i++) {
             System.out.println(dolar.repeat(i));
         }
-
     }
 }
